@@ -15,14 +15,14 @@ bandit13:FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn "ask AI"
 bandit14:MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS " ssh.private, chmod 600 {private key}, ssh -i {private key} {user}@{IP ADDRESS} -p {PORT}"
 bandit15:8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo "echo {bandit14's passwd} | nc localhost 30000"
 bandit16:kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx " openssl(to interact with ssl/tsl cert.) s_client(s stands for ssl whihc means we are the client) -connect localhost 30001"
-bandit17:EReVavePLFHtFlFsjn3hyzMlvSuSAcRD "nmap -p 31000-32000 localhost, solve17.sh, ssh -i key.private"
+bandit17:EReVavePLFHtFlFsjn3hyzMlvSuSAcRD "nmap -p 31000-32000 localhost, bandit17.sh, ssh -i key.private"
 bandit18:x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO "diff password.old password.new"
 bandit19:cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8 "ssh {user}@{ip address} {imeadiate command}"
 bandit20:0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO "./bandit20-do cat /etc/bandit_pass/bandit20"
 bandit21:EeoULMCra2q0dSkYj561DX7s1CpBuOBt "(on the attacker) echo"{bandit20} | nc -l(listen) -p {port}&, (on target) ./suconnect {port}"
 bandit22:tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q "cat /etc/cron.d/cronjob_bandit22, cat /usr/bin/cronjob_bandit22.sh, cat {dir that saves the pass to}
 bandit23:0Zf11ioIjMVN551jX3CmStKLYqjk54Ga "echo I am user bandit23 | md5sum | cut -d ' ' -f 1, cat /tmp/{gen. hash}
-bandit24:gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 "mktemp -d (cd the dir) , mv script24.sh /var/spool/bandit24/foo(don't use cp as you don't have write permission)
+bandit24:gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 "mktemp -d (cd the dir) , mv bandit24.sh /var/spool/bandit24/foo(don't use cp as you don't have write permission)
 bandit25:iCi86ttT4KSNe1armKiwbQNmB3YJP3q4 "for i in $(seq -w 0 9999); do echo "gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 $i"; done | nc localhost 30002"
 bandit26:s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ "(minimize the terminal so much) ssh -i bandit26.sshkey bandit26@bandit.labs.overthewire.org -p 2220,then v , ctrl+z,:set shell=/bin/bash {enter}, :shell"
 bandit27:upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB "./bandit27-do cat /etc/bandit_pass/bandit27"
